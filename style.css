@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	background-image: url(background.png);
+	background-repeat: repeat;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Open Sans";
+	font-size: 4em;
+
+}
+
+strong {
+	font-size: 1.5em;
+}
+
+section#items {
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+}
+
+#item {
+	width: 18%;
+}
+
+#item:hover {
+	opacity: 0.5;
+}
