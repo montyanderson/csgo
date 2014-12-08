@@ -31,7 +31,11 @@ foreach($items as $item) {
 	if($item["icon_url_large"]) {
 		$hash = str_replace("+", "%20", urlencode($item["market_hash_name"]));
 		echo "<a href='http://steamcommunity.com/market/listings/730/".$hash."'>"; 
-		echo "<img id='item' src='".$image.$item["icon_url_large"]."' />";
+		echo "<img class='item";
+		if(substr($item["name"], 0, 4) == "Stat") {
+			echo " stattrack ";
+		}
+		echo "' src='".$image.$item["icon_url_large"]."' />";
 		echo "</a>";
 	} else {
 		echo "<!--Item has no image-->";

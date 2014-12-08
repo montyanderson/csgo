@@ -22,10 +22,16 @@ section#items {
 	text-align: center;
 }
 
-#item {
+.item {
 	width: 18%;
+	margin: 5px;
 }
 
-#item:hover {
+.item:hover {
 	opacity: 0.5;
+}
+
+.item.stattrack {
+	border: 5px solid orange;
+	border-radius: 5px;
 }
