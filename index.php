@@ -24,13 +24,17 @@ $items = $data["rgDescriptions"];
 		body {
 			background-color: #1b2838;
 			color: white;
+			font-family: "Open Sans";
+			text-align: center;
+		}
+
+		a {
+			color: inherit !important;
 		}
 
 		h1 {
 			text-align: center;
-			font-family: "Open Sans";
 			font-size: 4em;
-
 		}
 
 		strong {
@@ -66,6 +70,7 @@ $items = $data["rgDescriptions"];
 
 		<h1><strong><?php echo $id; ?></strong>'s Profile</h1>
 
+		<h4>Built by <a href="http://github.com/montyanderson">@montyanderson</a></h4>
 
 		<section id="items">
 <?php
