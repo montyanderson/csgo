@@ -43,6 +43,7 @@ $image = "";
 			margin-left: 10%;
 			text-align: center;
 			background-color: rgba(0, 0, 0, 0.4);
+			box-shadow: 0 0 14px #030303 inset;
 		}
 
 		.item {
