@@ -16,8 +16,48 @@ $image = "";
 <html>
 	<head>
 
+		<meta charset="utf-8">
 		<title><?php echo $id ?>'s Profile</title>
-		<link href="style.css" rel="stylesheet" />
+
+		<style>
+		@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+		body {
+			background-color: #1b2838;
+			color: white;
+		}
+
+		h1 {
+			text-align: center;
+			font-family: "Open Sans";
+			font-size: 4em;
+
+		}
+
+		strong {
+			font-size: 1.5em;
+		}
+
+		section#items {
+			width: 80%;
+			margin-left: 10%;
+			text-align: center;
+		}
+
+		.item {
+			width: 18%;
+			margin: 5px;
+		}
+
+		.item:hover {
+			opacity: 0.5;
+		}
+
+		.item.stattrack {
+			border: 5px solid orange;
+			border-radius: 5px;
+		}
+		</style>
 
 	</head>
 	<body>
@@ -29,7 +69,7 @@ $image = "";
 <?php
 foreach($items as $item) {
 	$image_url = "http://cdn.steamcommunity.com/economy/image/";
-	
+
 	if($item["icon_url_large"]) {
 		$image_url = $image_url . $item["icon_url_large"];
 	} else {
