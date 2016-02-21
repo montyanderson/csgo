@@ -30,16 +30,16 @@ $image = "http://cdn.steamcommunity.com/economy/image/";
 foreach($items as $item) {
 	if($item["icon_url_large"]) {
 		$hash = str_replace("+", "%20", urlencode($item["market_hash_name"]));
-		echo "<a href='http://steamcommunity.com/market/listings/730/".$hash."'>"; 
+		echo "<a href='http://steamcommunity.com/market/listings/730/".$hash."'>" . PHP_EOL;
 		echo "<img class='item";
-		if(substr($item["name"], 0, 4) == "Stat") {
-			echo " stattrack ";
-		}
+		if(substr($item["name"], 0, 4) == "Stat") echo " stattrack ";
 		echo "' src='".$image.$item["icon_url_large"]."' />";
-		echo "</a>";
+		echo "</a>" . PHP_EOL;
 	} else {
 		echo "<!--Item has no image-->";
 	}
+
+	echo PHP_EOL;
 }
 ?>
 		</section>
