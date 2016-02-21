@@ -48,6 +48,7 @@ $image = "";
 		.item {
 			width: 18%;
 			margin: 5px;
+			transition: 0.2s opacity;
 		}
 
 		.item:hover {
