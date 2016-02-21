@@ -2,6 +2,22 @@
 
 A php-powered web page that shows a Steam user's Counter Strike: Global Offensive items.
 
+![](http://i.imgur.com/z0daY2d.jpg)
+
+## Hacking / Changing
+
+To use a different Steam game for the inventory, simple change the app id on line 3.
+
+``` php
+<?php
+// Change
+$query = "http://steamcommunity.com/id/".$id."/inventory/json/730/2/";
+// to
+$query = "http://steamcommunity.com/id/".$id."/inventory/json/440/2/";
+```
+
+![](http://i.imgur.com/LpVHXZv.jpg)
+
 ## Helper Function
 
 ``` php
