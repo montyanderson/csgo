@@ -42,6 +42,7 @@ $image = "";
 			width: 80%;
 			margin-left: 10%;
 			text-align: center;
+			background-color: rgba(0, 0, 0, 0.4);
 		}
 
 		.item {
