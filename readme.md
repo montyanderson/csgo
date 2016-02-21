@@ -2,6 +2,22 @@
 
 A php-powered web page that shows a Steam user's Counter Strike: Global Offensive items.
 
+## Helper Function
+
+``` php
+<?php
+
+function getUserInventory($id, $app = 730) {
+    $url = "http://steamcommunity.com/id/" . $id . "/inventory/json/" . $app . "/2/";
+    $res = file_get_contents($url);
+    $data = json_decode($res, true);
+    return $data["rgDescriptions"];
+}
+
+$items = getUserInventory("m0nty_tv");
+
+```
+
 ## Steam API Example
 
 ``` php
