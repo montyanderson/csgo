@@ -10,7 +10,7 @@ if(!$data) {
 }
 
 $items = $data["rgDescriptions"];
-$image = "http://cdn.steamcommunity.com/economy/image/";
+$image = "";
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,16 +28,20 @@ $image = "http://cdn.steamcommunity.com/economy/image/";
 		<section id="items">
 <?php
 foreach($items as $item) {
+	$image_url = "http://cdn.steamcommunity.com/economy/image/";
+	
 	if($item["icon_url_large"]) {
-		$hash = str_replace("+", "%20", urlencode($item["market_hash_name"]));
-		echo "<a href='http://steamcommunity.com/market/listings/730/".$hash."'>" . PHP_EOL;
-		echo "<img class='item";
-		if(substr($item["name"], 0, 4) == "Stat") echo " stattrack ";
-		echo "' src='".$image.$item["icon_url_large"]."' />";
-		echo "</a>" . PHP_EOL;
+		$image_url = $image_url . $item["icon_url_large"];
 	} else {
-		echo "<!--Item has no image-->";
+		$image_url = $image_url . $item["icon_url"];
 	}
+
+	$hash = str_replace("+", "%20", urlencode($item["market_hash_name"]));
+	echo "<a href='http://steamcommunity.com/market/listings/730/".$hash."'>" . PHP_EOL;
+	echo "<img class='item";
+	if(substr($item["name"], 0, 4) == "Stat") echo " stattrack ";
+	echo "' src='".$image_url."' />";
+	echo "</a>" . PHP_EOL;
 
 	echo PHP_EOL;
 }
