@@ -1,5 +1,8 @@
 # csgo
 
+[![GitHub issues](https://img.shields.io/github/issues-raw/montyanderson/csgo.svg)](https://github.com/montyanderson/csgo/issues)
+[![GitHub stars](https://img.shields.io/github/stars/montyanderson/csgo.svg?style=social&label=Star)](https://github.com/montyanderson/csgo)
+
 A php-powered web page that shows a Steam user's Counter Strike: Global Offensive items.
 
 ![](http://i.imgur.com/z0daY2d.jpg)
