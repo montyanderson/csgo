@@ -1,6 +1,6 @@
 <?php
 $id = str_replace("/", "", $_SERVER["QUERY_STRING"]);
-$query = "http://steamcommunity.com/id/".$id."/inventory/json/730/2/";
+$query = "http://steamcommunity.com/profiles/".$id."/inventory/json/730/2/";
 $json = file_get_contents($query);
 $data = json_decode($json, true);
 
