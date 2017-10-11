@@ -93,6 +93,7 @@ $items = $data["rgDescriptions"];
 <body>
 
 <h1><?php echo profile($id)['name']; ?>'s <?php echo gameid_name($appid); ?>  Inventory</h1>
+<?php if ($image == 1) {?><a href="<?php echo profile($id)['profileurl'];?>"><img src="<?php echo profile($id)['avatar'];?>"></a><?php } else {} ?>
 <h4>Built by <a href="http://github.com/montyanderson">@montyanderson</a></h4>
 
 <section id="items">
